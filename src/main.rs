@@ -49,9 +49,5 @@ fn eat_char(inp: &str, ch: char) -> &str {
 
 fn is_comment(inp: &str) -> bool {
     // if line begins with # then its a comment
-    if inp.chars().next().filter(|c| *c == '#').is_some() {
-        true
-    } else {
-        false
-    }
+    inp.chars().next().filter(|c| *c == '#').is_some()
 }
